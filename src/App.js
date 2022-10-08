@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Desbord from './Components/Desbord';
+import Sidebar from './Components/Sidebar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+let data={ 
+earningsMonthly:"40,000",
+earningsAnnuals:"215,000",
+task:"50",
+pendingRequest:18
+}
+
+  return <>
+  <div id='wrapper'>
+   <Sidebar/>
+   <Desbord data={data}/>
+   </div>
+  </>
 }
 
 export default App;
